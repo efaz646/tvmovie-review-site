@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - ReelTalk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Logo">
+      <h1>ReelTalk</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#movies">Movie Reviews</a>
+            <a href="services.html#tv">TV Reviews</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="signup.html" class="active">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Join ReelTalk</h2>
+      <p>Sign up for free and start discovering great movies and TV shows today!</p>
+    </section>
+
+    <div class="signup-box">
+      <h2>Create Your Account</h2>
+      <form id="signupForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name">
+          <div id="nameErr" class="error">Full name is required.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="Enter your email">
+          <div id="emailErr" class="error">Enter a valid email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Min 6 characters">
+          <div id="passErr" class="error">Password must be at least 6 characters.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input type="password" id="confirmPassword" placeholder="Confirm your password">
+          <div id="confirmErr" class="error">Passwords do not match.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="favGenre">Favorite Genre</label>
+          <select id="favGenre">
+            <option value="">Select a genre...</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="horror">Horror</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="thriller">Thriller</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms">
+            I agree to the <a href="#" onclick="openModal('termsModal'); return false;" style="color:#e94560;">Terms & Conditions</a>
+          </label>
+        </div>
+
+        <button type="submit" class="btn" style="width:100%;">Sign Up</button>
+      </form>
+      <p style="text-align:center; margin-top:15px; color:#aaa;">
+        Already have an account? <a href="#" onclick="showAlert('Login feature coming soon!'); return false;" style="color:#e94560;">Log In</a>
+      </p>
+    </div>
+
+    <!-- Why Join -->
+    <section style="margin-top:30px;">
+      <h2>Why Join?</h2>
+      <div class="card-grid">
+        <div class="card"><div class="card-content"><h3>Exclusive Reviews</h3><p>Access reviews and ratings you won't find elsewhere.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Community</h3><p>Connect with fellow movie lovers and share your reviews.</p></div></div>
+        <div class="card"><div class="card-content"><h3>Personalized Picks</h3><p>Get recommendations tailored to your taste.</p></div></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('termsModal')">&times;</button>
+      <h3>Terms & Conditions</h3>
+      <p>By signing up, you agree to:</p>
+      <ul style="margin-left:20px; color:#aaa;">
+        <li>You must be at least 13 years old</li>
+        <li>All content is for personal use only</li>
+        <li>We respect your privacy</li>
+        <li>You can delete your account anytime</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="alert"></div>
+
+  <footer>
+    <p>&copy; 2026 ReelTalk - An Internet Services Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ReelTalk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Logo">
+      <h1>ReelTalk</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#movies">Movie Reviews</a>
+            <a href="services.html#tv">TV Reviews</a>
+          </div>
+        </li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>About ReelTalk</h2>
+      <p>An Internet Services project about the movies and TV shows we love.</p>
+    </section>
+
+    <section>
+      <h2>The Project</h2>
+      <p>ReelTalk was created as part of my Internet Services project to demonstrate how HTML, CSS, and JavaScript can be used to build a functional, interactive website.</p>
+      <p>I have always been passionate about movies and TV shows, so I decided to combine that interest with my coursework. The website features reviews of some of the greatest films and series ever made, along with interactive elements such as video players, modals, image galleries, and form validation.</p>
+      <button class="btn" onclick="openModal('goalModal')">Read Project Goals</button>
+    </section>
+
+    <section>
+      <h2>About the Creator</h2>
+      <div class="team-member" style="max-width:300px; margin-bottom:20px;">
+        
+        <h3>Ragib Mohammed Saleh</h3>
+        <p>Student & Creator</p>
+        <p style="font-size:0.85rem; color:#aaa;">Internet Services Project</p>
+      </div>
+      <h3>Technologies Used</h3>
+      <ul style="margin-left:20px; color:#aaa; line-height:2;">
+        <li>HTML5 for page structure</li>
+        <li>CSS3 for styling and animations</li>
+        <li>JavaScript for interactivity</li>
+        <li>YouTube embeds for trailers</li>
+      </ul>
+    </section>
+
+    <!-- Video -->
+    <section>
+      <h2>Project Overview</h2>
+      
+    </section>
+
+    <!-- Features Table -->
+    <section>
+      <h2>Project Features</h2>
+      <table>
+        <thead>
+          <tr><th>Feature</th><th>Where</th><th>Technology</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Interlinked Navigation</td><td>All Pages</td><td>HTML</td></tr>
+          <tr><td>Modal Pop-Ups</td><td>Home, About, Services</td><td>JavaScript</td></tr>
+          <tr><td>Form Validation</td><td>Sign Up</td><td>JavaScript</td></tr>
+          <tr><td>Video Controls</td><td>Home, About</td><td>HTML5 + JS</td></tr>
+          <tr><td>Image Gallery</td><td>Services</td><td>JavaScript</td></tr>
+          <tr><td>Hover Animations</td><td>All Pages</td><td>CSS</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Goals Modal -->
+  <div id="goalModal" class="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal('goalModal')">&times;</button>
+      <h3>Project Goals</h3>
+      <p>This project was created to meet the requirements of the Internet Services course:</p>
+      <ul style="margin-left:20px; color:#aaa;">
+        <li>Create a multi-page website with at least 5 interlinked pages</li>
+        <li>Include header, logo, navigation, main body, and footer</li>
+        <li>Use external CSS for consistent styling</li>
+        <li>Add interactive elements: videos, images, tables, forms, buttons, animations, modals</li>
+        <li>Implement JavaScript for form validation and pop-ups</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="alert"></div>
+
+  <footer>
+    <p>&copy; 2026 ReelTalk - An Internet Services Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

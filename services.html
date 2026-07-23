@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - ReelTalk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Logo">
+      <h1>ReelTalk</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html" class="active">Services</a>
+          <div class="dropdown">
+            <a href="#movies">Movie Reviews</a>
+            <a href="#tv">TV Reviews</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Our Services</h2>
+      <p>Everything you need to make informed viewing decisions.</p>
+    </section>
+
+    <!-- Movie Reviews -->
+    <section id="movies">
+      <h2>Movie Reviews</h2>
+      <div class="service-item">
+        <div class="service-icon">&#127916;</div>
+        <div>
+          <h3>In-Depth Movie Analysis</h3>
+          <p>Detailed reviews covering plot, direction, cinematography, and acting. We rate on a 1-10 IMDb scale.</p>
+          <p><strong>Reviewed:</strong> The Godfather, The Shawshank Redemption, The Dark Knight, Interstellar, Avengers: Endgame</p>
+          <a href="index.html" class="btn">View Movie Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV Reviews -->
+    <section id="tv">
+      <h2>TV Show Reviews</h2>
+      <div class="service-item">
+        <div class="service-icon">&#128250;</div>
+        <div>
+          <h3>Season & Episode Guides</h3>
+          <p>Full season overviews with binge-worthiness ratings. Expandable reviews with detailed breakdowns.</p>
+          <p><strong>Reviewed:</strong> Game of Thrones, Breaking Bad, The Wire, Prison Break, Better Call Saul</p>
+          <a href="reviews.html" class="btn">View TV Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rating System -->
+    <section>
+      <h2>Our Rating System</h2>
+      <div class="service-item">
+        <div class="service-icon">&#9733;</div>
+        <div>
+          <h3>IMDb-Style Ratings</h3>
+          <p>Every review includes a score out of 10 based on Story, Acting, Direction, and overall quality.</p>
+          <button class="btn" onclick="showAlert('Check out our reviews for detailed ratings!')">Learn More</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section>
+      <h2>Featured Titles Gallery</h2>
+      <div style="text-align:center;">
+        <img id="galleryImg" src="images/Godfather.png" alt="Gallery" style="max-width:100%; border-radius:10px;" class="animated-img">
+        <div style="margin-top:10px;">
+          <button class="btn" onclick="prevImage()">&#8249; Prev</button>
+          <button class="btn" onclick="nextImage()">Next &#8250;</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="alert"></div>
+
+  <footer>
+    <p>&copy; 2026 ReelTalk - An Internet Services Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    initGallery([
+      'images/Godfather.png',
+      'images/Shawshank.png',
+      'images/Darkknight.png',
+      'images/Interstellar.png',
+      'images/Avengers.png',
+      'images/GoT.png',
+      'images/brba.png',
+      'images/wire.png',
+      'images/prison.png',
+      'images/bcs.png'
+    ]);
+  </script>
+</body>
+</html>

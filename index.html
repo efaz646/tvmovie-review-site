@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReelTalk - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Logo">
+      <h1>ReelTalk</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#movies">Movie Reviews</a>
+            <a href="services.html#tv">TV Reviews</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Welcome to ReelTalk</h2>
+      <p>Your destination for honest movie and TV show reviews.</p>
+      <button class="btn" onclick="pickRandom()">Pick a Movie for Me</button>
+    </section>
+
+    <!-- Movie Cards -->
+    <section>
+      <h2>Featured Movies</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="images/Godfather.png" alt="The Godfather" class="animated-img">
+          <div class="card-content">
+            <h3>The Godfather</h3>
+            <div class="rating">9.2/10</div>
+            <p>The Corleone family saga. The gold standard for crime cinema.</p>
+            <button class="btn" onclick="openModal('m1')">Read Review</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Shawshank.png" alt="Shawshank Redemption" class="animated-img">
+          <div class="card-content">
+            <h3>The Shawshank Redemption</h3>
+            <div class="rating">9.3/10</div>
+            <p>A story of hope and resilience. Widely regarded as the greatest film ever made.</p>
+            <button class="btn" onclick="openModal('m2')">Read Review</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Darkknight.png" alt="The Dark Knight" class="animated-img">
+          <div class="card-content">
+            <h3>The Dark Knight</h3>
+            <div class="rating">9.0/10</div>
+            <p>Heath Ledger's iconic Joker redefines the superhero genre.</p>
+            <button class="btn" onclick="openModal('m3')">Read Review</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Interstellar.png" alt="Interstellar" class="animated-img">
+          <div class="card-content">
+            <h3>Interstellar</h3>
+            <div class="rating">8.7/10</div>
+            <p>A sci-fi epic about love, time, and the survival of humanity.</p>
+            <button class="btn" onclick="openModal('m4')">Read Review</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/Avengers.png" alt="Avengers Endgame" class="animated-img">
+          <div class="card-content">
+            <h3>Avengers: Endgame</h3>
+            <div class="rating">8.4/10</div>
+            <p>The epic conclusion to Marvel's Infinity Saga.</p>
+            <button class="btn" onclick="openModal('m5')">Read Review</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trailers -->
+    <section style="margin-top:30px;">
+      <h2>Movie Trailers</h2>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>The Godfather</h3>
+        <iframe height="300" src="https://www.youtube.com/embed/_IqFJLdV13o" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>The Shawshank Redemption</h3>
+        <iframe height="300" src="https://www.youtube.com/embed/PLl99DlL6b4" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>The Dark Knight</h3>
+        <iframe height="300" src="https://www.youtube.com/embed/EXeTwQWrcwY" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Interstellar</h3>
+        <iframe height="300" src="https://www.youtube.com/embed/zSWdZVtXT7E" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Avengers: Endgame</h3>
+        <iframe height="300" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Top Rated Table -->
+    <section style="margin-top:30px;">
+      <h2>Top Rated Movies</h2>
+      <table>
+        <thead>
+          <tr><th>Title</th><th>Year</th><th>Director</th><th>Rating</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>The Shawshank Redemption</td><td>1994</td><td>Frank Darabont</td><td>9.3/10</td></tr>
+          <tr><td>The Godfather</td><td>1972</td><td>Francis Ford Coppola</td><td>9.2/10</td></tr>
+          <tr><td>The Dark Knight</td><td>2008</td><td>Christopher Nolan</td><td>9.0/10</td></tr>
+          <tr><td>Interstellar</td><td>2014</td><td>Christopher Nolan</td><td>8.7/10</td></tr>
+          <tr><td>Avengers: Endgame</td><td>2019</td><td>Russo Brothers</td><td>8.4/10</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modals -->
+  <div id="m1" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('m1')">&times;</button><h3>The Godfather (1972)</h3><div class="rating">9.2/10</div><p><strong>Director:</strong> Francis Ford Coppola<br><strong>Cast:</strong> Marlon Brando, Al Pacino, James Caan</p><p>The Corleone crime family saga. A true masterpiece.</p></div></div>
+  <div id="m2" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('m2')">&times;</button><h3>The Shawshank Redemption (1994)</h3><div class="rating">9.3/10</div><p><strong>Director:</strong> Frank Darabont<br><strong>Cast:</strong> Tim Robbins, Morgan Freeman</p><p>A powerful story of hope and friendship.</p></div></div>
+  <div id="m3" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('m3')">&times;</button><h3>The Dark Knight (2008)</h3><div class="rating">9.0/10</div><p><strong>Director:</strong> Christopher Nolan<br><strong>Cast:</strong> Christian Bale, Heath Ledger</p><p>Heath Ledger's Joker is one of cinema's greatest villains.</p></div></div>
+  <div id="m4" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('m4')">&times;</button><h3>Interstellar (2014)</h3><div class="rating">8.7/10</div><p><strong>Director:</strong> Christopher Nolan<br><strong>Cast:</strong> Matthew McConaughey, Anne Hathaway</p><p>A visually stunning sci-fi epic about love and time.</p></div></div>
+  <div id="m5" class="modal"><div class="modal-content"><button class="close" onclick="closeModal('m5')">&times;</button><h3>Avengers: Endgame (2019)</h3><div class="rating">8.4/10</div><p><strong>Directors:</strong> Russo Brothers<br><strong>Cast:</strong> Robert Downey Jr., Chris Evans</p><p>The epic conclusion to Marvel's Infinity Saga.</p></div></div>
+
+  <div id="alert"></div>
+
+  <footer>
+    <p>&copy; 2026 ReelTalk - An Internet Services Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reviews - ReelTalk</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="images/logo.svg" alt="Logo">
+      <h1>ReelTalk</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="services.html#movies">Movie Reviews</a>
+            <a href="services.html#tv">TV Reviews</a>
+          </div>
+        </li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="reviews.html" class="active">Reviews</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>TV Show Reviews</h2>
+      <p>Honest takes on the greatest TV shows ever made.</p>
+    </section>
+
+    <!-- Game of Thrones -->
+    <div class="review-item">
+      <h3>Game of Thrones</h3><div class="rating">9.5/10</div>
+      <p>HBO's fantasy epic. Seasons 1-6 are near-perfect television.</p>
+      <button class="btn" onclick="toggleReview('got')">Show Full Review</button>
+      <div id="got" style="display:none; margin-top:10px; padding:10px; background:#0d0d0d; border-radius:8px;">
+        <p><strong>Seasons:</strong> 8 (2011-2019) | <strong>Creator:</strong> David Benioff</p>
+        <p><strong>Cast:</strong> Emilia Clarke, Kit Harington, Peter Dinklage</p>
+      </div>
+    </div>
+
+    <!-- Breaking Bad -->
+    <div class="review-item">
+      <h3>Breaking Bad</h3><div class="rating">9.5/10</div>
+      <p>The greatest character study in television history.</p>
+      <button class="btn" onclick="toggleReview('bb')">Show Full Review</button>
+      <div id="bb" style="display:none; margin-top:10px; padding:10px; background:#0d0d0d; border-radius:8px;">
+        <p><strong>Seasons:</strong> 5 (2008-2013) | <strong>Creator:</strong> Vince Gilligan</p>
+        <p><strong>Cast:</strong> Bryan Cranston, Aaron Paul, Anna Gunn</p>
+      </div>
+    </div>
+
+    <!-- The Wire -->
+    <div class="review-item">
+      <h3>The Wire</h3><div class="rating">9.4/10</div>
+      <p>The most realistic portrayal of American institutions ever put on screen.</p>
+      <button class="btn" onclick="toggleReview('wire')">Show Full Review</button>
+      <div id="wire" style="display:none; margin-top:10px; padding:10px; background:#0d0d0d; border-radius:8px;">
+        <p><strong>Seasons:</strong> 5 (2002-2008) | <strong>Creator:</strong> David Simon</p>
+        <p><strong>Cast:</strong> Dominic West, Idris Elba, Wendell Pierce</p>
+      </div>
+    </div>
+
+    <!-- Prison Break -->
+    <div class="review-item">
+      <h3>Prison Break</h3><div class="rating">8.3/10</div>
+      <p>One of the most gripping thrillers on television.</p>
+      <button class="btn" onclick="toggleReview('pb')">Show Full Review</button>
+      <div id="pb" style="display:none; margin-top:10px; padding:10px; background:#0d0d0d; border-radius:8px;">
+        <p><strong>Seasons:</strong> 5 (2005-2017) | <strong>Creator:</strong> Paul Scheuring</p>
+        <p><strong>Cast:</strong> Wentworth Miller, Dominic Purcell</p>
+      </div>
+    </div>
+
+    <!-- Better Call Saul -->
+    <div class="review-item">
+      <h3>Better Call Saul</h3><div class="rating">9.0/10</div>
+      <p>A spin-off that surpasses its predecessor in nuance.</p>
+      <button class="btn" onclick="toggleReview('bcs')">Show Full Review</button>
+      <div id="bcs" style="display:none; margin-top:10px; padding:10px; background:#0d0d0d; border-radius:8px;">
+        <p><strong>Seasons:</strong> 6 (2015-2022) | <strong>Creators:</strong> Vince Gilligan, Peter Gould</p>
+        <p><strong>Cast:</strong> Bob Odenkirk, Jonathan Banks, Rhea Seehorn</p>
+      </div>
+    </div>
+
+    <!-- TV Trailers -->
+    <section style="margin-top:30px;">
+      <h2>TV Show Trailers</h2>
+      <!-- REPLACE the IDs after /embed/ with your own YouTube trailer IDs -->
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Game of Thrones</h3>
+        <iframe height="350" src="https://www.youtube.com/embed/EP7c_puxlLo" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Breaking Bad</h3>
+        <iframe height="350" src="https://www.youtube.com/embed/0C_LYlz0y7Y" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>The Wire</h3>
+        <iframe height="350" src="https://www.youtube.com/embed/1S5khOZ1wBs" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Prison Break</h3>
+        <iframe height="350" src="https://www.youtube.com/embed/tzXrvfwqqT0" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="video-container" style="margin-bottom:15px;">
+        <h3>Better Call Saul</h3>
+        <iframe height="350" src="https://www.youtube.com/embed/NWbrE9HxucA" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section style="margin-top:30px;">
+      <h2>Comparison</h2>
+      <table>
+        <thead>
+          <tr><th>Title</th><th>Seasons</th><th>Rating</th><th>Best Season</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Game of Thrones</td><td>8</td><td>9.5/10</td><td>Season 4</td></tr>
+          <tr><td>Breaking Bad</td><td>5</td><td>9.5/10</td><td>Season 5</td></tr>
+          <tr><td>The Wire</td><td>5</td><td>9.4/10</td><td>Season 4</td></tr>
+          <tr><td>Prison Break</td><td>5</td><td>8.3/10</td><td>Season 1</td></tr>
+          <tr><td>Better Call Saul</td><td>6</td><td>9.0/10</td><td>Season 6</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div id="alert"></div>
+
+  <footer>
+    <p>&copy; 2026 ReelTalk - An Internet Services Project</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

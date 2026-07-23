@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid #e94560;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  color: #e94560;
+  font-size: 1.4rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 5px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 18px;
+  color: #e0e0e0;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #e94560;
+  color: #fff;
+}
+
+/* Dropdown */
+nav ul li {
+  position: relative;
+}
+
+nav ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1a1a2e;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  border: 1px solid #333;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+nav ul li .dropdown a {
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+}
+
+/* main */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+h2 {
+  color: #e94560;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #e94560;
+  margin-bottom: 8px;
+}
+
+/* hero */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,52,96,0.9));
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* cards */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  border-color: #e94560;
+  box-shadow: 0 8px 25px rgba(233,69,96,0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.rating {
+  color: #ffd700;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #c73a52;
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  background: #1a1a2e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #e94560;
+  color: #fff;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #333;
+}
+
+tr:hover {
+  background: rgba(233,69,96,0.1);
+}
+
+/* forms */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #e94560;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #e0e0e0;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+.error {
+  color: #e94560;
+  font-size: 0.85rem;
+  display: none;
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1a1a2e;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  border: 1px solid #e94560;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #aaa;
+  background: none;
+  border: none;
+}
+
+.close:hover {
+  color: #e94560;
+}
+
+/* alert */
+#alert {
+  display: none;
+  position: fixed;
+  top: 20px; right: 20px;
+  background: #28a745;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  z-index: 3000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #1a1a2e, #0f3460);
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #e94560;
+}
+
+/* video */
+.video-container {
+  max-width: 800px;
+  margin: 15px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.video-container video,
+.video-container iframe {
+  width: 100%;
+  display: block;
+}
+
+/* reviews */
+.review-item {
+  padding: 15px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border-left: 4px solid #e94560;
+}
+
+/* signup */
+.signup-box {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #1a1a2e;
+  border-radius: 12px;
+  border: 1px solid #333;
+}
+
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.team-member {
+  text-align: center;
+  padding: 20px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #e94560;
+  margin-bottom: 10px;
+}
+
+/* Serviceitem */
+.service-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: #1a1a2e;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+}
+
+.service-icon {
+  font-size: 2rem;
+  min-width: 50px;
+  text-align: center;
+}
+
+/* Hover animation */
+.animated-img {
+  transition: transform 0.5s;
+}
+
+.animated-img:hover {
+  transform: scale(1.05);
+}
+
+/* Pulse */
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
