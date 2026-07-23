@@ -77,8 +77,8 @@ movie-review-site/
 
 ## Author
 
-**Your Name** - Internet Services Course Project
+**Ragib Mohammed Saleh** - Internet Services Course Project
 
-## License
+## license
 
-This project is for educational purposes only.
+this project was done as part of a summative.
